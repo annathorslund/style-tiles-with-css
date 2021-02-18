@@ -1,54 +1,36 @@
-/* change these */
+@font-face {
+  src: url(fonts/Kayak\ Sans\ Regular.otf);
+  font-family: Kayak Regular;
+  font-style: normal;
+}
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
-
-* {
+ {
   box-sizing: border-box;
 }
 
-/* THIS IS ALL meant for editing. You might want to do it differently, 
-name the variables differently, 
-use the fonts in other ways in the font hierarchy etc. */
-
-/* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --bg-color: #ad4100;
+  --link-color: #e3a22a;
+  --link-hover-color: #c2aa90;
+  --color-4: #402000;
+  --color-5: #204c45;
+  --color-6: #200;
 
-  --primary-font: "Open Sans", sans-serif;
+  --primary-font: Kayak Regular;
   --secondary-font: "Droid Serif", serif;
   --main-text-color: #000;
 
   --white-space: 1rem;
+  font-family: "Playfair Display", serif;
 }
 
-button {
-  transition: all 3s;
-}
-a {
-  transition: all 3s;
-}
 button:hover {
-  background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+  opacity: 40%;
 }
 
-button:active {
-  background-color: var(--bg-color);
-}
-
-a:hover {
-  color: var(--link-hover-color);
-  font-size: 4rem;
-}
 html {
   font-size: 100%;
-  font-family: var(--primary-font);
+  font-family: "Playfair Display", serif;
 }
 
 img {
@@ -77,6 +59,7 @@ footer {
   padding-right: 0.75em;
   font-weight: bold;
   color: white;
+  font-family: "Catamaran", sans-serif;
 }
 
 .header-wrapper h2 {
@@ -84,15 +67,17 @@ footer {
   color: rgba(255, 255, 255, 0.95);
   font-weight: bold;
   margin: var(--white-space) 0;
+  font-family: "Catamaran", sans-serif;
 }
 
 .header-wrapper h3 {
   font-size: 1.2rem;
-  font-style: italic;
+  font-family: "Catamaran", sans-serif;
 }
 
 .header-wrapper h4 {
   font-size: 0.8rem;
+  font-family: "Catamaran", sans-serif;
 }
 
 main {
@@ -104,21 +89,23 @@ section {
 }
 
 .section-heading {
-  font-style: italic;
   font-size: 1.3rem;
   color: #777;
   margin: 0.5rem 0;
+  font-family: "Catamaran", sans-serif;
 }
 
 ul {
   display: flex;
   justify-content: space-between;
+  font-family: "Catamaran", sans-serif;
 }
 
 .swatches li {
   margin-right: 5vw;
-  height: 15vw;
-  width: 20%;
+  height: 10vw;
+  width: 10vw;
+  border-radius: 50%;
 }
 
 ul li:last-child {
@@ -146,8 +133,8 @@ ul li:last-child {
 }
 
 .textures li {
-  height: 30vw;
-  width: 40%;
+  height: 75%;
+  width: 75%;
   margin-right: 5vw;
 }
 
@@ -181,21 +168,24 @@ ul li:last-child {
 button {
   padding: 1rem;
   border-radius: 4px;
-  background: var(--link-color);
+  border-color: #204c45;
+  background: none;
   text-align: center;
   text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
   letter-spacing: 1px;
-  color: white;
+  color: #204c45;
   text-transform: uppercase;
-  text-shadow: 0px -1px 0px #0374a0;
   transition: all 0.2s ease;
   cursor: pointer;
   margin: 0 1rem 1rem 0;
 }
 
 .secondary-button {
-  background: var(--color-5);
+  border-radius: 50%;
+  border-color: #ad4100;
+  height: 120px;
+  width: 120px;
+  color: #ad4100;
 }
 
 button:focus,
@@ -211,31 +201,29 @@ button:focus-within {
 
 .h1-sample {
   font-size: 2.4rem;
-  font-weight: bold;
+  color: #204c45;
+  font-family: "Catamaran", sans-serif;
 }
 
 .h2-sample {
-  font-family: var(--secondary-font);
-  font-style: italic;
+  font-family: "Catamaran", sans-serif;
   font-size: 1.25rem;
+  color: #402000;
+}
+
+footer {
+  font-family: "Catamaran", sans-serif;
 }
 
 p.typography-sample {
-  font-family: var(--secondary-font);
+  font-family: "Playfair Display", serif;
   line-height: 1.5;
   max-width: 960px;
-}
-
-strong {
-  font-weight: bold;
-}
-
-em {
-  font-style: italic;
+  color: #402000;
 }
 
 a {
-  font-family: var(--primary-font);
+  font-family: "Catamaran", sans-serif;
   color: var(--link-color);
   font-weight: bold;
   text-decoration: none;
@@ -246,7 +234,7 @@ p[class*="font-details-"] {
   margin-top: 0.5rem;
   margin-bottom: calc(2 * var(--white-space));
   font-size: 0.75rem;
-  font-family: var(--secondary-font);
+  font-family: "Playfair Display", serif;
   color: #6f6f6f;
 }
 
@@ -257,10 +245,6 @@ p[class*="font-details-"] {
 
 .adjectives ul {
   flex-direction: column;
-}
-
-footer {
-  font-style: italic;
 }
 
 @media (min-width: 800px) {
